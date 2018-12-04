@@ -1,8 +1,7 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ComboBoxFaculty.Items.Add("คณะวิศวกรรมศาสตร์")
-        ComboBoxFaculty.Items.Add("คณะเทคโนโลยีสารสนเทศ")
-        ComboBoxFaculty.Items.Add("คณะบริหารธุรกิจ")
+        Dim Faculty() As String = {"คณะวิศวกรรมศาสตร์", "คณะเทคโนโลยีสารสนเทศ", "คณะบริหารธุรกิจ"}
+        ComboBoxFaculty.Items.AddRange(Faculty)
     End Sub
 
     Private Sub ComboBoxFaculty_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxFaculty.SelectedIndexChanged
@@ -38,6 +37,15 @@
                             "ชื่อ นามสกุล : " & name & vbNewLine &
                             "คณะ : " & type & vbNewLine &
                             "สาขา : " & subject)
+
+            TextBoxId.Text = ""
+            TextBoxName.Text = ""
+            ComboBoxFaculty.Items.Clear()
+            Dim Faculty() As String = {"คณะวิศวกรรมศาสตร์", "คณะเทคโนโลยีสารสนเทศ", "คณะบริหารธุรกิจ"}
+            ComboBoxFaculty.Items.AddRange(Faculty)
+            ComboBoxMajor.Items.Clear()
+            ButtonOK.Enabled = False
+            ButtonReset.Enabled = False
         End If
     End Sub
 
@@ -45,7 +53,8 @@
         TextBoxId.Text = ""
         TextBoxName.Text = ""
         ComboBoxFaculty.Items.Clear()
-
+        Dim Faculty() As String = {"คณะวิศวกรรมศาสตร์", "คณะเทคโนโลยีสารสนเทศ", "คณะบริหารธุรกิจ"}
+        ComboBoxFaculty.Items.AddRange(Faculty)
         ComboBoxMajor.Items.Clear()
         ButtonOK.Enabled = False
         ButtonReset.Enabled = False
