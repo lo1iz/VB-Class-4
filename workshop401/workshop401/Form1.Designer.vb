@@ -44,7 +44,6 @@ Partial Class Form1
         'ListBoxMenu
         '
         Me.ListBoxMenu.FormattingEnabled = True
-        Me.ListBoxMenu.Items.AddRange(New Object() {"ข้าวกระเพราหมู", "ข้าวกระเพราไก่", "ข้าวกระเพราทะเล", "ข้าวกระเพรามังสวิรัติ", "ข้าวกระเพราเจ", "น้ำเปล่า", "น้ำผลไม้รวม", "น้ำชา"})
         Me.ListBoxMenu.Location = New System.Drawing.Point(50, 84)
         Me.ListBoxMenu.Name = "ListBoxMenu"
         Me.ListBoxMenu.Size = New System.Drawing.Size(220, 212)
@@ -117,7 +116,7 @@ Partial Class Form1
         Me.Controls.Add(Me.ListBoxMenu)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "Food Order"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
